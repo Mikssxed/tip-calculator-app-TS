@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href="./styles.css" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+  <header>
+    <img src="./images/logo.svg" alt="logo">
+  </header>
+  <main>
+    <section id="select">
+      <h1>Bill</h1>
+      <input type="number" name="bill" id="bill" placeholder="0">
+      <h1>Select Tip %</h1>
+      <div id="tips">
+        <div class="tip">5%</div>
+        <div class="tip">10%</div>
+        <div class="tip">15%</div>
+        <div class="tip">25%</div>
+        <div class="tip">50%</div>
+        <input type="number" name="custom" id="custom" placeholder="Custom">
+      </div>
+      <h1>Number of People</h1>
+      <p id="error">Can't be zero</p>
+      <input type="number" name="people" id="people" placeholder="0">
+    </section>
+    <section id="results">
+      <div id="top" class="amount">
+        <div class="text">
+          <h2>Tip Amount</h2>
+          <p>/ person</p>
+        </div>
+        <h3 id="amount">$0.00</h3>
+      </div>
+      <div class="amount">
+        <div class="text">
+          <h2>Total</h2>
+          <p>/ person</p>
+        </div>
+        <h3 id="total">$0.00</h3>
+      </div>
+      <button>RESET</button>
+    </section>
+  </main>
+  <script src="./dist/app.js"></script>
+</body>
+</html>

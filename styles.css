@@ -1,0 +1,225 @@
+:root {
+    --primary-color1: hsl(172, 67%, 45%);
+    --neutral-color1: hsl(183, 100%, 15%);
+    --neutral-color2: hsl(186, 14%, 43%);
+    --neutral-color3: hsl(184, 14%, 56%);
+    --neutral-color4: hsl(185, 41%, 84%);
+    --neutral-color5: hsl(189, 41%, 97%);
+    --neutral-color6: hsl(0, 0%, 100%);
+}
+* {
+    font-family: 'Space Mono', monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 24px;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--neutral-color4);
+    flex-direction: column;
+    gap: 70px;
+}
+main {
+    width: 1000px;
+    height: 500px;
+    display: flex;
+    background-color: var(--neutral-color6);
+    border-radius: 20px;
+    padding: 30px;
+}
+#select {
+    width: 50%;
+    padding: 30px;
+    position: relative;
+}
+h1 {
+    font-size: 0.7rem;
+    color: var(--neutral-color2);
+    margin-bottom: 5px;
+}
+#bill {
+    background: url(./images/icon-dollar.svg) no-repeat;
+    background-position: center left 5%;
+    margin-bottom: 40px;
+}
+#people {
+    background: url(./images/icon-person.svg) no-repeat;
+    background-position: center left 5%;
+}
+#bill, #people {
+    width: 100%;
+    height: 50px;
+    border-radius: 7px;
+    border: none;
+    background-color: var(--neutral-color5);
+    text-align: end;
+    font-size: 1rem;
+    color: var(--neutral-color1);
+}
+#bill::placeholder, #people::placeholder {
+    color: var(--neutral-color3);
+}
+#bill:focus, #people:focus {
+    outline: none;
+    border: 2px solid var(--primary-color1);
+}
+#tips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+input {
+    padding-right: 10px;
+}
+.tip {
+    width: 126px;
+    height: 50px;
+    background-color: var(--neutral-color1);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--neutral-color5);
+}
+.tip:hover {
+    background-color: var(--neutral-color4);
+    cursor: pointer;
+}
+#custom {
+    width: 126px;
+    height: 50px;
+    color: var(--neutral-color1);
+    background-color: var(--neutral-color5);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: var(--neutral-color1);
+    font-size: 1rem;
+    text-align: end;
+    padding-right: 0;
+}
+#custom:focus {
+    border: 2px solid var(--primary-color1);
+    padding-right: 10px;
+}
+#custom::placeholder {
+    text-align: center;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input:hover {
+    cursor: pointer;
+}
+#results {
+    width: 50%;
+    padding: 30px;
+    background-color: var(--neutral-color1);
+    border-radius: 20px;
+    padding-top: 50px;
+}
+.amount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+h2 {
+    font-size: 0.7rem;
+    color: var(--neutral-color5);
+}
+p {
+    font-size: 0.6rem;
+    color: var(--neutral-color3);
+}
+h3 {
+    font-size: 2rem;
+    color: var(--primary-color1);
+}
+#top {
+    margin-bottom: 30px;
+}
+button {
+    width: 100%;
+    height: 50px;
+    margin-top: 130px;
+    border-radius: 5px;
+    background-color: var(--primary-color1);
+    border: none;
+    font-size: 1rem;
+    color: var(--neutral-color1);
+}
+button:hover {
+    background-color: var(--neutral-color4);
+    cursor: pointer;
+}
+.active {
+    background-color: var(--primary-color1);
+}
+.active:hover {
+    background-color: var(--primary-color1);
+}
+#error {
+    position: absolute;
+    right: 8%;
+    bottom: 18%;
+    color: red;
+    opacity: 0;
+}
+@media(max-width: 1000px) {
+    body {
+        height: auto;
+        gap: 40px;
+        padding-top: 60px;
+    }
+    main {
+        width: 100%;
+        height: auto;
+        border-radius: 20px 20px 0 0;
+        flex-direction: column;
+    }
+    #select {
+        width: 100%;
+        padding: 0px;
+        margin-bottom: 30px;
+    }
+    .tip {
+        width: calc(50% - 8px);
+    }
+    #custom {
+        width: calc(50% - 8px);
+    }
+    #results {
+        width: 100%;
+    }
+    h2 {
+        font-size: 0.6rem;
+    }
+    p {
+        font-size: 0.5rem;
+    }
+    h3 {
+        font-size: 1.4rem;
+    }
+    #top {
+        margin-bottom: 0px;
+    }
+    button {
+        margin-top: 30px;
+    }
+    #error {
+        position: absolute;
+        right: 1%;
+        bottom: 12%;
+        color: red;
+        opacity: 0;
+    }
+}
